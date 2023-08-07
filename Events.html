@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head> 
+  <style>
+    .red-button {
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+    <h3>OnMouseOver</h3>
+    <h5>mouse over to change button background-color</h5>
+  <button id="OnMouseOver" onmouseover="changeColor(this)" onmouseout="restoreColor(this)">OnMouseOver</button>
+
+  <h3>OnMouseOut</h3>
+    <h5>mouse out to change button background-color</h5>
+  <button id="OnMouseOut" onmouseout="changeColor(this)" onmouseover="restoreColor(this)">OnMouseOut</button>
+
+  <h3>Onclick</h3>
+    <h5>mouse click to change button background-color</h5>
+  <button id="Onclick" Onclick="changeColor(this)" onmouseout="restoreColor(this)">Onclick</button>
+
+  <h3>Ondblclick</h3>
+    <h5>double click to change button background-color</h5>
+  <button id="Ondblclick" Ondblclick="changeColor(this)" onmouseout="restoreColor(this)">Ondblclick</button>
+
+  <h3>Onfocus</h3>
+    <h5>click to change input background-color</h5>
+    <input type="text" />
+    
+
+  <script>
+    function changeColor(button) {
+      button.classList.add('red-button');
+    }
+
+    function restoreColor(button) {
+      button.classList.remove('red-button');
+    }
+  </script>
+</body>
+</html>
